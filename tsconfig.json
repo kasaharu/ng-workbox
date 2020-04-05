@@ -22,6 +22,12 @@
       "es2018",
       "dom"
     ],
+    "paths": {
+      "ng-workbox": [
+        "dist/ng-workbox/ng-workbox",
+        "dist/ng-workbox"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
