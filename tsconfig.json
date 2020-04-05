@@ -26,6 +26,9 @@
       "@kasaharu/ng-workbox": [
         "dist/ng-workbox/ng-workbox",
         "dist/ng-workbox"
+      ],
+      "@kasaharu/ng-workbox/components": [
+        "dist/ng-workbox/components"
       ]
     }
   },
