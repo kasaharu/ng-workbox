@@ -13,7 +13,7 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
         display: block;
       }
     `,
-  ], ,
+  ],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NgWorkboxComponent implements OnInit {
