@@ -8,9 +8,8 @@ describe('NgWorkboxComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NgWorkboxComponent ],
-    })
-    .compileComponents();
+      declarations: [NgWorkboxComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

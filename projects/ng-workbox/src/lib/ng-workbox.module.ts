@@ -3,8 +3,7 @@ import { NgWorkboxComponent } from './ng-workbox.component';
 
 @NgModule({
   declarations: [NgWorkboxComponent],
-  imports: [
-  ],
+  imports: [],
   exports: [NgWorkboxComponent],
 })
-export class NgWorkboxModule { }
+export class NgWorkboxModule {}
