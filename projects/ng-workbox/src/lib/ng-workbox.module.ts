@@ -1,9 +1,8 @@
 import { NgModule } from '@angular/core';
-import { NgWorkboxComponent } from './ng-workbox.component';
 
 @NgModule({
-  declarations: [NgWorkboxComponent],
+  declarations: [],
   imports: [],
-  exports: [NgWorkboxComponent],
+  exports: [],
 })
 export class NgWorkboxModule {}
