@@ -4,6 +4,6 @@ import { HeaderComponent } from './header/header.component';
 @NgModule({
   declarations: [HeaderComponent],
   imports: [],
-  exports: [],
+  exports: [HeaderComponent],
 })
 export class NgWorkboxComponentsModule {}
