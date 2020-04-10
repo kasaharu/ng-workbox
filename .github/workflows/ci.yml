@@ -67,8 +67,21 @@ jobs:
         with:
           name: code-coverage-report-for-ng-basis
           path: coverage/ng-basis
-      #       - name: e2e test ng-basis
-      #         run: |
-      #           yarn e2e:ci ng-basis
-      #         env:
-      #           CI: true
+
+      - name: build ng-workbox
+        run: |
+          yarn build --prod ng-workbox
+        env:
+          CI: true
+
+      - name: unit test ng-workbox
+        run: |
+          yarn test:ci ng-workbox
+        env:
+          CI: true
+
+      - name: Archive code coverage results
+        uses: actions/upload-artifact@v1
+        with:
+          name: code-coverage-report-for-ng-workbox
+          path: coverage/ng-workbox
