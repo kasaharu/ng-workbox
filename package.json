@@ -13,7 +13,6 @@
     "stylelint": "stylelint './**/*.scss'",
     "prettier": "prettier --write './**/*.{ts,html,scss}'",
     "prettier:check": "prettier --check './**/*.{ts,html,scss}'",
-    "postinstall": "ngcc",
     "packaging": "ng build ng-workbox --prod && yarn pack dist/ng-workbox",
     "push": "yarn publish ./kasaharu-ng-workbox-v*.tgz --access public"
   },
