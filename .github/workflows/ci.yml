@@ -50,24 +50,6 @@ jobs:
         env:
           CI: true
 
-      - name: build demo-app
-        run: |
-          yarn build --prod demo-app
-        env:
-          CI: true
-
-      - name: unit test demo-app
-        run: |
-          yarn test:ci demo-app
-        env:
-          CI: true
-
-      - name: Archive code coverage results
-        uses: actions/upload-artifact@v1
-        with:
-          name: code-coverage-report-for-demo-app
-          path: coverage/demo-app
-
       - name: build ng-workbox
         run: |
           yarn build --prod ng-workbox
@@ -85,3 +67,21 @@ jobs:
         with:
           name: code-coverage-report-for-ng-workbox
           path: coverage/ng-workbox
+
+      - name: build demo-app
+        run: |
+          yarn build --prod demo-app
+        env:
+          CI: true
+
+      - name: unit test demo-app
+        run: |
+          yarn test:ci demo-app
+        env:
+          CI: true
+
+      - name: Archive code coverage results
+        uses: actions/upload-artifact@v1
+        with:
+          name: code-coverage-report-for-demo-app
+          path: coverage/demo-app
