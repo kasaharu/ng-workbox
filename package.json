@@ -1,5 +1,5 @@
 {
-  "name": "@kasaharu/ng-workbox",
+  "name": "ng-workbox",
   "version": "0.0.2",
   "scripts": {
     "ng": "ng",
@@ -13,8 +13,8 @@
     "stylelint": "stylelint './**/*.scss'",
     "prettier": "prettier --write './**/*.{ts,html,scss}'",
     "prettier:check": "prettier --check './**/*.{ts,html,scss}'",
-    "packaging": "ng build ng-workbox --prod && yarn pack dist/ng-workbox",
-    "push": "yarn publish ./kasaharu-ng-workbox-v*.tgz --access public"
+    "packaging": "ng build ng-workbox --prod && cd dist/ng-workbox && yarn pack",
+    "push": "yarn publish ./dist/ng-workbox/kasaharu-ng-workbox-v*.tgz --access public"
   },
   "private": false,
   "dependencies": {
