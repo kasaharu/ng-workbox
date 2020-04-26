@@ -13,9 +13,11 @@
     "stylelint": "stylelint './**/*.scss'",
     "prettier": "prettier --write './**/*.{ts,html,scss}'",
     "prettier:check": "prettier --check './**/*.{ts,html,scss}'",
-    "postinstall": "ngcc"
+    "postinstall": "ngcc",
+    "packaging": "ng build ng-workbox --prod && yarn pack dist/ng-workbox",
+    "push": "yarn publish ./kasaharu-ng-workbox-v*.tgz --access public"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "~9.1.3",
     "@angular/cdk": "^9.2.0",
