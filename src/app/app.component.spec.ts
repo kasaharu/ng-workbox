@@ -30,12 +30,6 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('demo-app');
   });
 
-  it('should render title', () => {
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('demo-app app is running!');
-  });
-
   it(`should have the HeaderComponent`, async () => {
     const headerHarness = await loader.getHarness(HeaderHarness);
 
