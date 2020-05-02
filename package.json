@@ -17,6 +17,7 @@
     "push": "yarn publish ./dist/ng-workbox/kasaharu-ng-workbox-v*.tgz --access public"
   },
   "private": false,
+  "license": "MIT",
   "dependencies": {
     "@angular/animations": "~9.1.3",
     "@angular/cdk": "^9.2.0",
