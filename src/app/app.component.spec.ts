@@ -25,9 +25,9 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'demo-app'`, () => {
+  it(`should have as title 'ng-workbox'`, () => {
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('demo-app');
+    expect(app.title).toEqual('ng-workbox');
   });
 
   it(`should have the HeaderComponent`, async () => {
