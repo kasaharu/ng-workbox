@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 describe('AppComponent', () => {
   let fixture: ComponentFixture<AppComponent>;
   let loader: HarnessLoader;
+  let app: AppComponent;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -18,15 +19,14 @@ describe('AppComponent', () => {
 
     fixture = TestBed.createComponent(AppComponent);
     loader = TestbedHarnessEnvironment.loader(fixture);
+    app = fixture.componentInstance;
   }));
 
   it('should create the app', () => {
-    const app = fixture.componentInstance;
     expect(app).toBeTruthy();
   });
 
   it(`should have as title 'ng-workbox'`, () => {
-    const app = fixture.componentInstance;
     expect(app.title).toEqual('ng-workbox');
   });
 
@@ -34,5 +34,12 @@ describe('AppComponent', () => {
     const headerHarness = await loader.getHarness(HeaderHarness);
 
     expect(headerHarness).toBeTruthy();
+  });
+
+  it(`should show as title 'ng-workbox'`, async () => {
+    const headerHarness = await loader.getHarness(HeaderHarness);
+    const title = await headerHarness.getTitleText();
+
+    expect(title).toBe(app.title);
   });
 });
