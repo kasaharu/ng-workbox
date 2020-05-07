@@ -1,1 +1,13 @@
-<p>card works!</p>
+<div class="ngw-card">
+  <div class="title">
+    {{ title }}
+  </div>
+  <ng-container *ngIf="description">
+    <div class="description">
+      {{ description }}
+    </div>
+  </ng-container>
+  <div class="actions">
+    <ng-content select="#ngwCardActions"></ng-content>
+  </div>
+</div>

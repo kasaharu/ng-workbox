@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'ngw-card',
@@ -8,6 +8,10 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 })
 export class CardComponent implements OnInit {
   constructor() {}
+  @Input()
+  title = '';
+  @Input()
+  description = '';
 
   ngOnInit(): void {}
 }

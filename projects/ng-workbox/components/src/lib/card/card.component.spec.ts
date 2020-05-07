@@ -1,24 +1,34 @@
+import { Component } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { CardComponent } from './card.component';
 
+@Component({
+  template: `<ngw-card [title]="title" [description]="description">
+    <div id="ngwCardActions"><a href="/">fuga</a></div>
+  </ngw-card>`,
+})
+class HostComponent {
+  title = 'Sample';
+  description = '';
+}
+
 describe('CardComponent', () => {
-  let component: CardComponent;
-  let fixture: ComponentFixture<CardComponent>;
+  let hostComponent: HostComponent;
+  let fixture: ComponentFixture<HostComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [CardComponent],
+      declarations: [CardComponent, HostComponent],
     }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CardComponent);
-    component = fixture.componentInstance;
+    fixture = TestBed.createComponent(HostComponent);
+    hostComponent = fixture.componentInstance;
     fixture.detectChanges();
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(hostComponent).toBeTruthy();
   });
 });
