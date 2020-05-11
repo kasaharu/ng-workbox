@@ -1,11 +1,18 @@
-import { ComponentHarness } from '@angular/cdk/testing';
+import { ComponentHarness, HarnessPredicate } from '@angular/cdk/testing';
+import { CardHarnessFilters } from './card-harness-filters';
 
+// tslint:disable: variable-name
+// tslint:disable: member-ordering
 export class CardHarness extends ComponentHarness {
   static hostSelector = 'ngw-card';
 
-  // tslint:disable-next-line: variable-name
+  static with(options: CardHarnessFilters = {}): HarnessPredicate<CardHarness> {
+    return new HarnessPredicate(CardHarness, options).addOption('title', options.title, (harness, title) =>
+      HarnessPredicate.stringMatches(harness.getTitleText(), title),
+    );
+  }
+
   private _cardTitleElement = this.locatorFor('.title');
-  // tslint:disable-next-line: variable-name
   private _cardDescriptionElement = this.locatorFor('.description');
 
   async getTitleText(): Promise<string> {
