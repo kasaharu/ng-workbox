@@ -19,12 +19,18 @@ export class CardHarness extends ComponentHarness {
     return (await this._cardTitleElement()).text();
   }
 
-  async getDescriptionText(): Promise<string> {
-    // NOTE: _cardDescriptionElement は条件によって生成されていない場合があるため catch が必要
+  async hasDescription(): Promise<boolean> {
+    // NOTE: _cardDescriptionElement が取得できない場合は error が throw される
     try {
-      return (await this._cardDescriptionElement()).text();
+      await this._cardDescriptionElement();
+      return true;
     } catch {
-      return '';
+      return false;
     }
+  }
+
+  async getDescriptionText(): Promise<string> {
+    const hasDescription = await this.hasDescription();
+    return hasDescription ? (await this._cardDescriptionElement()).text() : '';
   }
 }
