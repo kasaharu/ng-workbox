@@ -4,8 +4,8 @@ import { CardComponent } from './card/card.component';
 import { HeaderComponent } from './header/header.component';
 
 @NgModule({
-  declarations: [HeaderComponent, CardComponent],
+  declarations: [CardComponent, HeaderComponent],
   imports: [CommonModule],
-  exports: [HeaderComponent],
+  exports: [CardComponent, HeaderComponent],
 })
 export class NgWorkboxComponentsModule {}
