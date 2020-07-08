@@ -2,6 +2,10 @@
 
 ## How to use
 
+### Requirements
+
+- [Angular CDK](https://material.angular.io/cdk/categories) - `$ yarn ng add @angular/cdk`
+
 ### Install
 
 ```
