@@ -1,9 +1,6 @@
 {
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
   "dest": "../../dist/ng-workbox",
-  "whitelistedNonPeerDependencies": [
-    "@angular/cdk"
-  ],
   "lib": {
     "entryFile": "src/public-api.ts"
   }
