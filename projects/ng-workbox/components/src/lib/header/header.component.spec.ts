@@ -1,7 +1,7 @@
 import { HarnessLoader } from '@angular/cdk/testing';
 import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
 import { Component } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { HeaderHarness } from 'projects/ng-workbox/components/testing/src/public_api';
 import { HeaderComponent } from './header.component';
 
@@ -21,7 +21,7 @@ describe('HeaderComponent', () => {
   let hostComponent: HostComponent;
   let loader: HarnessLoader;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [HeaderComponent, HostComponent],
     }).compileComponents();

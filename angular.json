@@ -72,7 +72,6 @@
                 "hidden": true,
                 "vendor": true
               },
-              "extractCss": true,
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
@@ -165,7 +164,7 @@
       "prefix": "ngw",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
             "tsConfig": "projects/ng-workbox/tsconfig.lib.json",
             "project": "projects/ng-workbox/ng-package.json"
