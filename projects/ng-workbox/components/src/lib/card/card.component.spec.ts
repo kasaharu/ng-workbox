@@ -1,7 +1,7 @@
 import { HarnessLoader } from '@angular/cdk/testing';
 import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
 import { Component } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { CardHarness } from 'projects/ng-workbox/components/testing/src/lib/card/card-harness';
 import { CardComponent } from './card.component';
 
@@ -28,11 +28,13 @@ describe('CardComponent', () => {
   let hostComponent: HostComponent;
   let loader: HarnessLoader;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [CardComponent, HostComponent],
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [CardComponent, HostComponent],
+      }).compileComponents();
+    }),
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(HostComponent);

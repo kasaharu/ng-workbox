@@ -1,6 +1,6 @@
 import { HarnessLoader } from '@angular/cdk/testing';
 import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { HeaderComponent } from '@kasaharu/ng-workbox/components';
 import { HeaderHarness } from '@kasaharu/ng-workbox/components/testing';
@@ -11,16 +11,18 @@ describe('AppComponent', () => {
   let loader: HarnessLoader;
   let app: AppComponent;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      imports: [RouterTestingModule],
-      declarations: [AppComponent, HeaderComponent],
-    }).compileComponents();
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        imports: [RouterTestingModule],
+        declarations: [AppComponent, HeaderComponent],
+      }).compileComponents();
 
-    fixture = TestBed.createComponent(AppComponent);
-    loader = TestbedHarnessEnvironment.loader(fixture);
-    app = fixture.componentInstance;
-  }));
+      fixture = TestBed.createComponent(AppComponent);
+      loader = TestbedHarnessEnvironment.loader(fixture);
+      app = fixture.componentInstance;
+    }),
+  );
 
   it('should create the app', () => {
     expect(app).toBeTruthy();
