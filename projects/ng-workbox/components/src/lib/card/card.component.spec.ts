@@ -28,11 +28,13 @@ describe('CardComponent', () => {
   let hostComponent: HostComponent;
   let loader: HarnessLoader;
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      declarations: [CardComponent, HostComponent],
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [CardComponent, HostComponent],
+      }).compileComponents();
+    }),
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(HostComponent);

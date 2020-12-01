@@ -11,16 +11,18 @@ describe('AppComponent', () => {
   let loader: HarnessLoader;
   let app: AppComponent;
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      imports: [RouterTestingModule],
-      declarations: [AppComponent, HeaderComponent],
-    }).compileComponents();
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        imports: [RouterTestingModule],
+        declarations: [AppComponent, HeaderComponent],
+      }).compileComponents();
 
-    fixture = TestBed.createComponent(AppComponent);
-    loader = TestbedHarnessEnvironment.loader(fixture);
-    app = fixture.componentInstance;
-  }));
+      fixture = TestBed.createComponent(AppComponent);
+      loader = TestbedHarnessEnvironment.loader(fixture);
+      app = fixture.componentInstance;
+    }),
+  );
 
   it('should create the app', () => {
     expect(app).toBeTruthy();

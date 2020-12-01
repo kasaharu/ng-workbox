@@ -21,11 +21,13 @@ describe('HeaderComponent', () => {
   let hostComponent: HostComponent;
   let loader: HarnessLoader;
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      declarations: [HeaderComponent, HostComponent],
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [HeaderComponent, HostComponent],
+      }).compileComponents();
+    }),
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(HostComponent);
