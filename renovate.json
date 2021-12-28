@@ -1,6 +1,7 @@
 {
   "extends": [
-    "config:base"
+    "config:base",
+    "github>lacolaco/renovate-config:ng-update"
   ],
   "timezone": "Asia/Tokyo",
   "assignees": ["kasaharu"],
@@ -9,28 +10,7 @@
   "labels": ["renovate"],
   "lockFileMaintenance": {
     "enabled": true,
-    "schedule": [
-      "before 3am on the first day of the month"
-    ]
+    "schedule": ["before 3am on the first day of the month"]
   },
-  "baseBranches": ["master"],
-  "packageRules": [
-    {
-      "packagePatterns": ["*"],
-      "enabled": false
-    },
-    {
-      "packagePatterns": [
-        "prettier",
-        "stylelint",
-        "stylelint-config-standard",
-        "angular-cli-ghpages"
-      ],
-      "enabled": true
-    },
-    {
-      "packagePatterns": ["circleci/node"],
-      "enabled": true
-    }
-  ]
+  "packageRules": []
 }
