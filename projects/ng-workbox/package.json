@@ -2,10 +2,10 @@
   "name": "@kasaharu/ng-workbox",
   "version": "0.1200.0",
   "peerDependencies": {
-    "@angular/common": "^12.0.1",
-    "@angular/core": "^12.0.1"
+    "@angular/common": "^13.1.0",
+    "@angular/core": "^13.1.0"
   },
   "dependencies": {
-    "tslib": "^2.1.0"
+    "tslib": "^2.3.0"
   }
 }
