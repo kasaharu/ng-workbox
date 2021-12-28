@@ -1,6 +1,6 @@
 {
   "name": "@kasaharu/ng-workbox",
-  "version": "0.1200.0",
+  "version": "0.1301.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
